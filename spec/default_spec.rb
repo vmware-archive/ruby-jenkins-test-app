@@ -25,6 +25,10 @@ describe "Jenkins Ruby Test App" do
     }.to_not raise_exception
   end
 
+  it "we expect this to fail, we want to test that Jenkins still reports failures correctly", :failure do
+    expect(true).to eql(false)
+  end
+
   if cf_dummy_broker
     context "when cf-dummy-broker is available in VCAP_SERVICES env" do
       let(:credentials) { OpenStruct.new(cf_dummy_broker.fetch("credentials")) }

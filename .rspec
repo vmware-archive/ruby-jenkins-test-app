@@ -1,5 +1,4 @@
 --color
---warnings
 --require spec_helper
 --tag ~@failing
 --format doc

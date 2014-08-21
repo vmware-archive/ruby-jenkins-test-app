@@ -25,7 +25,7 @@ describe "Jenkins Ruby Test App" do
     }.to_not raise_exception
   end
 
-  it "we expect this to fail, we want to test that Jenkins still reports failures correctly", :failure do
+  it "we expect this to fail, we want to test that Jenkins still reports failures correctly", :failing do
     expect(true).to eql(false)
   end
 
